@@ -10,11 +10,12 @@ class Contact extends StatelessWidget {
   Column LayoutCnt() {
     return Column(children: [
       Container(
-          margin: EdgeInsets.fromLTRB(50, 30, 50, 0),
+          margin: EdgeInsets.fromLTRB(50, 20, 50, 0),
           child: Text(
             'Contact Me',
             style: TextStyle(fontSize: 30, color: Colors.white),
           )),
+      CircleAvatar(radius: 30, backgroundColor: Colors.white),
       SizedBox(
           width: 300,
           child: Divider(
@@ -22,14 +23,14 @@ class Contact extends StatelessWidget {
           )),
       Card(
         color: Colors.white,
-        margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        margin: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15),
           child: Row(
             children: [
               Icon(Icons.account_circle, color: Colors.grey[700]),
               SizedBox(
-                width: 20,
+                width: 33,
               ),
               Text(
                 'Hossein Rahmati',
@@ -42,9 +43,9 @@ class Contact extends StatelessWidget {
         ),
       ),
       Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Card(
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
           child: ListTile(
             title: Text('Rahmatei@gmail.com'),
             leading: Icon(
@@ -97,7 +98,7 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-                margin: EdgeInsets.fromLTRB(50, 20, 50, 0),
+                margin: EdgeInsets.fromLTRB(50, 5, 50, 0),
                 child: Text('Dice',
                     style: TextStyle(fontSize: 70, color: Colors.white))),
             SizedBox(
@@ -114,7 +115,7 @@ class _MyAppState extends State<MyApp> {
                       },
                       style: ButtonStyle(
                           padding: MaterialStateProperty.all(
-                              EdgeInsets.fromLTRB(10, 20, 10, 0))),
+                              EdgeInsets.fromLTRB(10, 10, 10, 0))),
                       child: (Image.asset('Images/dice$numberLeft.png'))),
                 ),
                 Expanded(
@@ -126,7 +127,7 @@ class _MyAppState extends State<MyApp> {
                         },
                         style: ButtonStyle(
                             padding: MaterialStateProperty.all(
-                                EdgeInsets.fromLTRB(10, 20, 10, 0))),
+                                EdgeInsets.fromLTRB(10, 10, 10, 0))),
                         child: (Image.asset('Images/dice$numberRight.png')))),
               ],
             ),
